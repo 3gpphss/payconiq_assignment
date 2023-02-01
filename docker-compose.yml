@@ -1,0 +1,23 @@
+version: "1"
+services:
+  payconiq-app:
+    image: payconiq-app
+    ports:
+      - "9090:8080"
+    networks:
+      - app-network-bridge
+    depends_on:
+      - mysqlappdb
+ 
+  mysqlappdb:
+    image: mysql:8
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network-bridge
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=bootdb  
+
+networks:
+  app-network-bridge: 
