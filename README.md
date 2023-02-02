@@ -18,4 +18,6 @@ PATCH /api/stocks/1 (update the price of a single stock)
 
 DELETE/api/stocks/1 (delete a single stock)
 
-Docker and Docker-compose also support.
+More information related to application please read https://github.com/3gpphss/payconiq_assignment/blob/main/ApplicationDocumentation.docx document.
+
+
